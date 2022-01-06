@@ -65,11 +65,6 @@ resource "aws_security_group" "web_server"{
     }
 }
 
-// Declare the EIP for wordpress site
-data "aws_eip" "wordpress_eip" {
-    id = "eipalloc-0c4c68616cd40a8de"
-}
-
 // Create an instance profile related to the role
 resource "aws_iam_instance_profile" "access_s3_profile" {
     name  = "access_s3_profile"
